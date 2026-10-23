@@ -58,6 +58,12 @@ The completed run records both `depth: 4` and `depth: 8` against the same 100 pr
 - **GSM8K, Ouro-2.6B, depth 8:** 63/100 correct (63%); mean E2E 63.70 s/example (0.0157 examples/s; 2.77 output tokens/s); peak PyTorch memory 6.86 GiB allocated / 7.96 GiB reserved. More depth reduced accuracy on this sample and made inference slower.
 - **GSM8K, Qwen3-8B, dense baseline:** 93/100 correct (93%); mean E2E 8.44 s/example (0.1185 examples/s; 26.84 output tokens/s); peak PyTorch memory 15.36 GiB allocated / 15.50 GiB reserved. Same 100 questions and seed; Qwen scored 8 percentage points higher than Ouro at depth 4 and processed 4.31× more examples per second. Ouro's mean output was 204 tokens versus Qwen's 227, so longer answers do not explain its lower throughput. The likely causes are Ouro's four recurrences of its 48-layer shared stack and its eager attention path; this is a plausible code-based explanation, not kernel-profiled attribution.
 
+### Trace analysis: Ouro depth 8 vs depth 4
+
+On the same 100 questions, depth 8 got **27 questions right at depth 4 wrong**, while recovering only **5** that depth 4 missed: a net loss of 22, matching the accuracy drop from 85/100 to 63/100. The paired traces show diverse reasoning errors, not one simple scoring artifact. For example, on the glasses problem (gold 64), depth 4 correctly counted 8 full-price and 8 discounted glasses; depth 8 incorrectly charged $3 for each glass and answered 60. On the football-games problem (gold 15), depth 8 wrote the correct equations but stopped before solving them. Some responses also changed the interpretation or arithmetic of the problem.
+
+Incomplete generations are a contributing issue, but not the main explanation: 6/100 depth-8 outputs omitted the `####` marker, compared with 4/100 at depth 4; one depth-8 response reached the 512-token cap, compared with three at depth 4. Several truncated outputs still contained the correct final numeric answer, so format/extraction failures alone do not explain the lower score. Evidence from these traces suggests that, on this prompt and sample, increasing recurrence did not reliably improve reasoning and sometimes led to worse answers or unfinished solutions. This is a small paired sample, not evidence that additional recurrence generally harms accuracy.
+
 Both were evaluated on the same deterministic 100 GSM8K test items. This compares checkpoints, not the architecture in isolation. The latency test is sequential eager inference, not a serving-throughput benchmark.
 
 ## Limitations
