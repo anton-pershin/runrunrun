@@ -38,23 +38,25 @@ source ~/venvs/ouro-cdr/bin/activate
 python evaluate.py ouro --task addition --n 20 --seed 20261022 --depth 4 --max-new-tokens 16
 python evaluate.py ouro --task addition --n 20 --seed 20261022 --depth 8 --max-new-tokens 16
 python evaluate.py ouro --task gsm8k --n 100 --seed 20261022 --depth 4 --max-new-tokens 512
-python evaluate.py ouro --task gsm8k --n 100 --seed 20261022 --depth 8 --max-new-tokens 512
+python evaluate.py ouro --task gsm8k --n 100 --seed 20261022 --depth 8 --max-new-tokens 512 --dataset-json results/ouro-gsm8k-depth4.json --out results
 source ~/venvs/vllm/bin/activate
 python evaluate.py qwen3 --task addition --n 20 --seed 20261022 --max-new-tokens 16
-python evaluate.py qwen3 --task gsm8k --n 100 --seed 20261022 --max-new-tokens 512
-```
-
-```bash
 python evaluate.py qwen3 --task gsm8k --n 100 --seed 20261022 --max-new-tokens 512 --dataset-json results/ouro-gsm8k-depth4.json --out results
 ```
 
-The shared input set avoids a second fetch of the dataset service. `results/` contains full predictions, including the selected test indices and prompts. Model weights and dataset files are not committed.
+```bash
+python run_depth8.py --depth 8 --input results/ouro-gsm8k-depth4.json --out results/ouro-gsm8k-depth8.json
+```
+
+The completed run records both `depth: 4` and `depth: 8` against the same 100 prompts; do not rerun the ordinary CLI command without `--dataset-json`, because it may fetch a different test order/revision subset.
 
 ## Results
 
 - **Addition control, Ouro-2.6B depth 4:** 20/20 correct; mean E2E 1.289 s/example; 0.776 examples/s; 5.39 output tokens/s; peak PyTorch memory 5.07 GiB allocated / 5.46 GiB reserved. The first run used a scorer bug (same final-digit-vs-period issue as Huginn); raw outputs were reparsed and are all correct.
 - **Addition control, Ouro-2.6B depth 8:** 19/20 correct; mean E2E 3.679 s/example; 0.272 examples/s; 2.91 output tokens/s; peak PyTorch memory 5.15 GiB allocated / 5.56 GiB reserved.
-- GSM8K results: Ouro 85/100 versus Qwen3-8B 93/100 on the same selected 100 examples; mean E2E latency 36.36 versus 8.44 s/question; throughput 0.0275 versus 0.1185 examples/s; peak PyTorch allocated VRAM 5.95 versus 15.36 GiB. Ouro's output-token rate was 5.62/s versus Qwen's 26.84/s, while mean output lengths were 204 versus 227 tokens. The throughput gap therefore reflects slow per-token generation, not longer Ouro answers. Likely causes are Ouro's recurrent reuse of a 48-layer stack four times and its eager attention path; these are plausible code-based explanations, not kernel-profiled attribution.
+- **GSM8K, Ouro-2.6B, depth 4:** 85/100 correct (85%); mean E2E 36.36 s/example (0.0275 examples/s; 5.62 output tokens/s); peak PyTorch memory 5.95 GiB allocated / 6.65 GiB reserved.
+- **GSM8K, Ouro-2.6B, depth 8:** 63/100 correct (63%); mean E2E 63.70 s/example (0.0157 examples/s; 2.77 output tokens/s); peak PyTorch memory 6.86 GiB allocated / 7.96 GiB reserved. More depth reduced accuracy on this sample and made inference slower.
+- **GSM8K, Qwen3-8B, dense baseline:** 93/100 correct (93%); mean E2E 8.44 s/example (0.1185 examples/s; 26.84 output tokens/s); peak PyTorch memory 15.36 GiB allocated / 15.50 GiB reserved. Same 100 questions and seed; Qwen scored 8 percentage points higher than Ouro at depth 4 and processed 4.31× more examples per second. Ouro's mean output was 204 tokens versus Qwen's 227, so longer answers do not explain its lower throughput. The likely causes are Ouro's four recurrences of its 48-layer shared stack and its eager attention path; this is a plausible code-based explanation, not kernel-profiled attribution.
 
 Both were evaluated on the same deterministic 100 GSM8K test items. This compares checkpoints, not the architecture in isolation. The latency test is sequential eager inference, not a serving-throughput benchmark.
 
