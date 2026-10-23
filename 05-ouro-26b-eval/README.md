@@ -1,6 +1,6 @@
 # Ouro-2.6B: addition parity and GSM8K pilot
 
-Status: in progress.
+Status: completed as a pilot; findings compare these checkpoints on limited workloads and do not establish a general SOTA or architecture claim.
 
 ## Objective
 
@@ -54,10 +54,7 @@ The shared input set avoids a second fetch of the dataset service. `results/` co
 
 - **Addition control, Ouro-2.6B depth 4:** 20/20 correct; mean E2E 1.289 s/example; 0.776 examples/s; 5.39 output tokens/s; peak PyTorch memory 5.07 GiB allocated / 5.46 GiB reserved. The first run used a scorer bug (same final-digit-vs-period issue as Huginn); raw outputs were reparsed and are all correct.
 - **Addition control, Ouro-2.6B depth 8:** 19/20 correct; mean E2E 3.679 s/example; 0.272 examples/s; 2.91 output tokens/s; peak PyTorch memory 5.15 GiB allocated / 5.56 GiB reserved.
-- **GSM8K, Ouro-2.6B depth 4:** 85/100 exact numeric matches; mean E2E 36.355 s/example; 0.0275 examples/s; 5.62 output tokens/s; peak PyTorch memory 5.95 GiB allocated / 6.65 GiB reserved. Model load took 2.49 s from cache.
-- **GSM8K, Qwen3-8B:** 93/100 exact numeric matches; mean E2E 8.442 s/example; 0.1185 examples/s; 26.84 output tokens/s; peak PyTorch memory 15.36 GiB allocated / 15.50 GiB reserved. Model load took 656.72 s, due to slow loading from the available cache/storage path.
-
-- **GSM8K:** Ouro-2.6B, 4 recurrent steps: 85/100 exact numeric matches; 36.36 s/example; 0.0275 examples/s; peak 5.95 GiB allocated / 6.65 GiB reserved. Qwen3-8B: 93/100; 8.44 s/example; 0.1185 examples/s; peak 15.36 / 15.50 GiB. Qwen scored 8 percentage points higher and ran 4.31× more examples/s; Ouro used 9.41 GiB less allocated VRAM.
+- GSM8K results: Ouro 85/100 versus Qwen3-8B 93/100 on the same selected 100 examples; mean E2E latency 36.36 versus 8.44 s/question; throughput 0.0275 versus 0.1185 examples/s; peak PyTorch allocated VRAM 5.95 versus 15.36 GiB. Ouro's output-token rate was 5.62/s versus Qwen's 26.84/s, while mean output lengths were 204 versus 227 tokens. The throughput gap therefore reflects slow per-token generation, not longer Ouro answers. Likely causes are Ouro's recurrent reuse of a 48-layer stack four times and its eager attention path; these are plausible code-based explanations, not kernel-profiled attribution.
 
 Both were evaluated on the same deterministic 100 GSM8K test items. This compares checkpoints, not the architecture in isolation. The latency test is sequential eager inference, not a serving-throughput benchmark.
 
