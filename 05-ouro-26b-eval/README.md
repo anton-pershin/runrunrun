@@ -14,6 +14,35 @@ Ouro-2.6B is selected as a promising, publicly available looped LM with a first-
 
 The original S1 run evaluated the 20 additions. A follow-up run at depth 32 gave Huginn 19/20 after fixing the scoring regex. Ouro scored 20/20 at depth 4 and 19/20 at depth 8. The prior studies' reported addition numbers were too low before scorer correction; current raw outputs and recalculated totals are included in the study 04 files. The GSM8K tests below use exactly 100 seeded indices from the official test split.
 
+## Architecture: Ouro looped stack vs Qwen3 dense stack
+
+Ouro reuses the same transformer stack multiple times for each token. At the tested depth of 4, the hidden representation passes through the shared 48-layer stack four times; the weights are shared across passes, not copied into four independent stacks. The recurrent loop adds computation without increasing the number of distinct layer weights. Qwen3-8B instead applies its decoder layers once in sequence; its layers have distinct weights, with no Ouro-style recurrence. Both models autoregressively emit tokens, feeding generated tokens back as input until the answer or token limit. See the [Ouro project page](https://ouro-llm.github.io/) and [Qwen3-8B model page](https://huggingface.co/Qwen/Qwen3-8B).
+
+```mermaid
+flowchart TB
+  subgraph Ouro["Ouro-2.6B · shared recurrent stack"]
+    OI[Prompt tokens] --> OE[Embedding]
+    OE --> OL1[Shared transformer stack · 48 layers]
+    OL1 --> OL2[Same weights · pass 2]
+    OL2 --> OL3[Same weights · pass 3]
+    OL3 --> OL4[Same weights · pass 4]
+    OL4 --> OH[LM head]
+    OH --> OT[Next token]
+    OT -. autoregressive input for next token .-> OI
+  end
+  subgraph Qwen["Qwen3-8B · dense decoder"]
+    QI[Prompt tokens] --> QE[Embedding]
+    QE --> QL1[Decoder layer 1 · distinct weights]
+    QL1 --> QL2[Decoder layer 2 · distinct weights]
+    QL2 --> QLN[... remaining decoder layers ...]
+    QLN --> QH[LM head]
+    QH --> QT[Next token]
+    QT -. autoregressive input for next token .-> QI
+  end
+```
+
+**Key difference:** Ouro's recurrent passes share parameters and add iterative computation; Qwen's layers are separate parameter sets in a conventional decoder stack. Recurrence does not make each generated token free: at fixed depth 4, Ouro repeatedly computes through its stack. In this study, Ouro used less peak allocated VRAM but generated tokens more slowly than Qwen. The diagram shows the tested Ouro depth-4 setting; depth 8 repeats the same shared stack eight times. Qwen's ellipsis avoids implying a specific layer count here.
+
 ## Evaluation protocol
 
 - GPU: `rtx3090-oct-22`, GeForce RTX 3090, 24 GB.
