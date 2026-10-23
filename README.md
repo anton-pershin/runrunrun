@@ -20,3 +20,7 @@ NOTE: this study followed an obsolete format and should not be used as an exampl
 
 Pilot comparison of Huginn-0125 at four recurrent steps with dense Qwen3-8B at approximately matched forward-pass compute, measuring exact accuracy, E2E generation latency, and peak VRAM on an RTX 3090.
 
+## 05-ouro-26b-eval
+
+Evaluation of ByteDance/Ouro-2.6B on the prior addition control and a deterministic GSM8K subset, with dense Qwen3-8B as reference.
+
