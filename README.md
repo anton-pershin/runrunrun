@@ -16,3 +16,7 @@ Tested Qwen3-8B deployment via vLLM and measured throughput.
 
 NOTE: this study followed an obsolete format and should not be used as an example
 
+## 04-huginn-equal-compute
+
+Pilot comparison of Huginn-0125 at four recurrent steps with dense Qwen3-8B at approximately matched forward-pass compute, measuring exact accuracy, E2E generation latency, and peak VRAM on an RTX 3090.
+
