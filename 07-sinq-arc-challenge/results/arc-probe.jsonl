@@ -1,0 +1,1 @@
+{"label": "arc-probe", "backend": "vllm", "model": "Qwen/Qwen3.5-9B", "dataset": "arc_challenge", "dataset_revision": "210d026faf9955653af8916fad021475a3f00453", "id": "Mercury_7175875", "gold": "C", "prediction": "C", "correct": true, "finish_reason": "stop", "completion_tokens": 2, "elapsed_s": 0.213, "response": "C"}

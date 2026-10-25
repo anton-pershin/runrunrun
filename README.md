@@ -27,6 +27,7 @@ Evaluation of ByteDance/Ouro-2.6B on the prior addition control and a determinis
 ## 06-mk-sh-v-visual-decisions
 
 A three-image local CPU probe of MK-SH-V. It answered a visible-number question correctly, but gave confident wrong answers to an island-location question and a people-counting task. Includes the user-provided images, exact questions, model outputs, limitations, and reproduction notes.
-## 08-sinq-mmlu-redux
 
-Comparison of Qwen3.5-9B BF16, 4-bit AWQ weight-only, and 4-bit SINQ weight-only models on a balanced 300-question MMLU-Redux subset. Includes offline/online quantization diagrams.
+## 07-sinq-arc-challenge
+
+Comparison of Qwen3.5-9B BF16, 4-bit AWQ weight-only, and 4-bit SINQ weight-only models on ARC-Challenge and MMLU-Redux. Includes inline Mermaid quantization schemas and final results.
