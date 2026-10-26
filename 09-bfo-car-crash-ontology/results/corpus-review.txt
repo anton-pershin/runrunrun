@@ -1,0 +1,7 @@
+Corpus file: /home/tony/datasets/entity_processing_news/car_crash/car_crash_news.jsonl
+Observed records: 13
+Observed total message-text characters: 5,101
+First-pass scope review: 12 reports describe a vehicle collision; record 8 describes a vehicle stopping/obstructing traffic while its driver prays, with no collision reported, and is excluded from the crash examples.
+Example modeled: record 4 (a freight train collides with a passenger car at a railway crossing; report says no one was hurt).
+
+Counts and scope decisions are based on manual reading of this tiny corpus. The dataset is not copied into this repository, and this note is not a fully annotated gold standard.
