@@ -63,6 +63,9 @@ Run `python scripts/answer_queries.py` to reproduce these queries over the annot
 | Which report explicitly says nobody was injured? | Record 4. |
 | Which reports mention traffic disruption? | Records 11 and 12. |
 | Which crash report involves a train? | Record 4. |
+| Which crash reports link to a death outcome affecting a driver? | Records 1 and 3. Follow `crash → hasReportedOutcome → death event → affects → person`, then check that person's `Driver` role. |
+
+The last question is a multi-hop graph query, not just a check for a `DeathProcess` label: it joins a crash to its reported death event, follows that death event to the affected person, and filters on the person's role. This makes it possible to state exactly why each result qualifies. The current runner implements this query by following those annotation links; it does not call an OWL reasoner.
 
 These are practical questions because each requires linking the story's events, participants, and outcomes, rather than finding one word. For example, injury wording varies: a person “was injured,” “received injuries,” or was taken to hospital. A structured annotation makes the extraction decision and its supporting phrase visible. The current query script is a small exact query runner, not a sophisticated natural-language question-answering system.
 

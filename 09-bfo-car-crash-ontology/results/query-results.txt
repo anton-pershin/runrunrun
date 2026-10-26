@@ -4,6 +4,8 @@ Q3 Which reports state a death? 2: 1, 3
 Q4 Which explicitly report no injuries? 1: 4
 Q5 Which reports describe traffic disruption? 2: 11, 12
 Q6 Which crash reports involve a train? 1: 4
+Q7 Which crash reports link to a death outcome affecting a driver? 2: 1, 3
+  Two relation hops: crash --hasReportedOutcome--> death --affects--> driver
 
 Evidence samples:
   record 1 DeathProcess [reported]: 52-летний водитель «Ниссана» погиб на месте
