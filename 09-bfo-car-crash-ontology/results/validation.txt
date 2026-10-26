@@ -1,0 +1,2 @@
+PASS: XML parsed; 8 domain classes; 7 sample individuals; BFO mappings and imported properties found in pinned BFO core.
+This is a structural check, not a description-logic reasoner or full OWL conformance check.

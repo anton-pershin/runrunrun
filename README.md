@@ -31,3 +31,7 @@ A three-image local CPU probe of MK-SH-V. It answered a visible-number question 
 ## 07-sinq-arc-challenge
 
 Comparison of Qwen3.5-9B BF16, 4-bit AWQ weight-only, and 4-bit SINQ weight-only models on ARC-Challenge and MMLU-Redux. Includes inline Mermaid quantization schemas and final results.
+
+## 09-bfo-car-crash-ontology
+
+An educational proof of concept for a toy car-crash-news ontology aligned to BFO 2020. Includes simple-language explanations, a small OWL file, a sample event graph, and reproducible structural checks.

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://example.org/car-crash-news#" xml:base="https://example.org/car-crash-news" xmlns:cc="https://example.org/car-crash-news#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:bfo="http://purl.obolibrary.org/obo/">
+  <owl:Ontology rdf:about="https://example.org/car-crash-news">
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/BFO-ontology/BFO-2020/bd1fb61c5fa4e358fc9690f0d214b1ac63fae594/21838-2/owl/bfo-core.owl"/>
+    <rdfs:label xml:lang="en">Toy ontology for car-crash news</rdfs:label>
+    <rdfs:comment xml:lang="en">Educational proof of concept. Domain classes are aligned to BFO 2020 core. This ontology does not claim a complete or authoritative accident model.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="#TrafficCollision">
+    <rdfs:label xml:lang="en">traffic collision</rdfs:label>
+    <rdfs:comment xml:lang="en">A process in which two or more transport vehicles make forceful contact. The news report may omit one or more participants.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RoadTrafficCrash"><rdfs:label xml:lang="en">road traffic crash</rdfs:label><rdfs:subClassOf rdf:resource="#TrafficCollision"/></owl:Class>
+  <owl:Class rdf:about="#Truck"><rdfs:label xml:lang="en">truck</rdfs:label><rdfs:subClassOf rdf:resource="#RoadVehicle"/></owl:Class>
+  <owl:Class rdf:about="#Car"><rdfs:label xml:lang="en">car</rdfs:label><rdfs:subClassOf rdf:resource="#RoadVehicle"/></owl:Class>
+  <owl:Class rdf:about="#Bus"><rdfs:label xml:lang="en">bus</rdfs:label><rdfs:subClassOf rdf:resource="#RoadVehicle"/></owl:Class>
+  <owl:Class rdf:about="#ElectricCar"><rdfs:label xml:lang="en">electric car</rdfs:label><rdfs:subClassOf rdf:resource="#Car"/></owl:Class>
+  <owl:Class rdf:about="#SUV"><rdfs:label xml:lang="en">sport utility vehicle</rdfs:label><rdfs:subClassOf rdf:resource="#RoadVehicle"/></owl:Class>
+  <owl:Class rdf:about="#Train"><rdfs:label xml:lang="en">train</rdfs:label><rdfs:subClassOf rdf:resource="#Vehicle"/></owl:Class>
+  <owl:Class rdf:about="#Trolleybus"><rdfs:label xml:lang="en">trolleybus</rdfs:label><rdfs:subClassOf rdf:resource="#Bus"/></owl:Class>
+  <owl:Class rdf:about="#DumpTruck"><rdfs:label xml:lang="en">dump truck</rdfs:label><rdfs:subClassOf rdf:resource="#Truck"/></owl:Class>
+  <owl:Class rdf:about="#FuelTanker"><rdfs:label xml:lang="en">fuel tanker</rdfs:label><rdfs:subClassOf rdf:resource="#Truck"/></owl:Class>
+  <owl:Class rdf:about="#InjuryProcess"><rdfs:label xml:lang="en">injury process</rdfs:label><rdfs:comment xml:lang="en">A process in which a person is injured. Do not infer it merely from an accident.</rdfs:comment><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#DeathProcess"><rdfs:label xml:lang="en">death process</rdfs:label><rdfs:comment xml:lang="en">A death process reported as an outcome.</rdfs:comment><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#RoadObstruction"><rdfs:label xml:lang="en">road obstruction</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#PrayerActivity"><rdfs:label xml:lang="en">prayer activity</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#TrafficDisruption"><rdfs:label xml:lang="en">traffic disruption</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#EmergencyBraking"><rdfs:label xml:lang="en">emergency braking</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#Overtaking"><rdfs:label xml:lang="en">overtaking</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#Hospitalization"><rdfs:label xml:lang="en">hospitalization</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:Class rdf:about="#InjuryAssessment"><rdfs:label xml:lang="en">injury assessment</rdfs:label><rdfs:comment xml:lang="en">A report assessment that no injury occurred; this is distinct from absence of information.</rdfs:comment><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/></owl:Class>
+  <owl:ObjectProperty rdf:about="#affects"><rdfs:label xml:lang="en">affects</rdfs:label><rdfs:comment xml:lang="en">Links a reported injury or death process to the person affected.</rdfs:comment></owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasReportedOutcome"><rdfs:label xml:lang="en">has reported outcome</rdfs:label><rdfs:comment xml:lang="en">Links a crash to an outcome stated in the news. It asserts reported association, not proven causation.</rdfs:comment></owl:ObjectProperty>
+  <owl:Class rdf:about="#Vehicle"><rdfs:label xml:lang="en">vehicle</rdfs:label><rdfs:comment xml:lang="en">A material transport object.</rdfs:comment><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/></owl:Class>
+  <owl:Class rdf:about="#RoadVehicle"><rdfs:label xml:lang="en">road vehicle</rdfs:label><rdfs:subClassOf rdf:resource="#Vehicle"/></owl:Class>
+  <owl:Class rdf:about="#Person"><rdfs:label xml:lang="en">person</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/></owl:Class>
+  <owl:Class rdf:about="#TransportSite"><rdfs:label xml:lang="en">transport site</rdfs:label><rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/></owl:Class>
+  <owl:ObjectProperty rdf:about="#hasParticipant"><rdfs:label xml:lang="en">has participant</rdfs:label><rdfs:comment xml:lang="en">BFO relation for process participants.</rdfs:comment><owl:equivalentProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/></owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasParticipant">
+    <rdfs:label xml:lang="en">has participant</rdfs:label>
+    <rdfs:comment xml:lang="en">Use BFO's relation: the process has the vehicle or person as participant.</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#occursAt">
+    <rdfs:label xml:lang="en">occurs at</rdfs:label>
+    <rdfs:comment xml:lang="en">Domain-friendly name for BFO's occurs in relation, linking a process to a site.</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasInjuryOutcome">
+    <rdfs:label xml:lang="en">has injury outcome</rdfs:label>
+    <rdfs:comment xml:lang="en">A domain relation for associating a crash process with a reported injury process. It is not a BFO core relation and does not by itself prove causation.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasDeathOutcome">
+    <rdfs:label xml:lang="en">has death outcome</rdfs:label>
+    <rdfs:comment xml:lang="en">A domain relation for associating a crash process with a reported death process. It does not by itself prove causation.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="#sampleCrash">
+    <rdf:type rdf:resource="#TrafficCollision"/>
+    <rdfs:label xml:lang="en">train-car collision in the sample report</rdfs:label>
+    <cc:hasParticipant rdf:resource="#sampleTrain"/>
+    <cc:hasParticipant rdf:resource="#sampleCar"/>
+    <cc:hasParticipant rdf:resource="#sampleDriver"/>
+    <cc:occursAt rdf:resource="#sampleCrossing"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#sampleTrain"><rdf:type rdf:resource="#Vehicle"/><rdfs:label xml:lang="en">freight train</rdfs:label></owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#sampleCar"><rdf:type rdf:resource="#RoadVehicle"/><rdfs:label xml:lang="en">passenger car</rdfs:label></owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#sampleDriver"><rdf:type rdf:resource="#Person"/><rdfs:label xml:lang="en">passenger-car driver</rdfs:label></owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#sampleCrossing"><rdf:type rdf:resource="#TransportSite"/><rdfs:label xml:lang="en">railway crossing between Bakhanskaya and Tonnelnaya stations</rdfs:label></owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#sampleCrashInjury"><rdf:type rdf:resource="#InjuryProcess"/><rdfs:label xml:lang="en">reported injury outcome</rdfs:label></owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#sampleCrashDeath"><rdf:type rdf:resource="#DeathProcess"/><rdfs:label xml:lang="en">reported death outcome (separate example)</rdfs:label></owl:NamedIndividual>
+</rdf:RDF>
