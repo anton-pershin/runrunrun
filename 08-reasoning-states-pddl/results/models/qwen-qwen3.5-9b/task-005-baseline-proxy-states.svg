@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2316" height="865" viewBox="0 0 2316 865">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#202a35}.title{font-size:25px;font-weight:bold}.sub{font-size:14px}.axis{font-size:13px}.tick{font-size:11px}.action{font-size:9px}.legend{font-size:12px}.panel{font-size:16px;font-weight:bold}</style>
+<text x="40" y="38" class="title">Blocks World · task-005 · baseline · trajectory comparison</text>
+<text x="40" y="64" class="sub">Each row is one rollout. Shared scales: X = tool-call time; Y = number of goal facts true after each call. START is t=0.</text>
+<text x="40" y="86" class="sub">Markers show outcomes; vertical action labels use action-family colors. Panels avoid overlap without changing data coordinates.</text>
+<text x="95" y="108" class="legend" font-weight="bold">Action labels:</text>
+<text x="195" y="108" class="legend" fill="#2463a6" style="fill:#2463a6;font-weight:bold">stack</text>
+<text x="305" y="108" class="legend" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">unstack</text>
+<text x="415" y="108" class="legend" fill="#148f77" style="fill:#148f77;font-weight:bold">pickup</text>
+<text x="525" y="108" class="legend" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">putdown</text>
+<rect x="30" y="125" width="2256" height="285" rx="8" fill="#f5f8fb"/>
+<text x="95" y="141" class="panel" fill="#c05a24" style="fill:#c05a24">Run 1: qwen/qwen3.5-9b · 49 calls · final 1/4 · goal_reached=False</text>
+<line x1="95" y1="397.0" x2="2271" y2="397.0" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="401.0" text-anchor="end" class="tick">0</text>
+<line x1="95" y1="334.5" x2="2271" y2="334.5" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="338.5" text-anchor="end" class="tick">1</text>
+<line x1="95" y1="272.0" x2="2271" y2="272.0" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="276.0" text-anchor="end" class="tick">2</text>
+<line x1="95" y1="209.5" x2="2271" y2="209.5" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="213.5" text-anchor="end" class="tick">3</text>
+<line x1="95" y1="147.0" x2="2271" y2="147.0" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="151.0" text-anchor="end" class="tick">4</text>
+<line x1="95.0" y1="147" x2="95.0" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="95.0" y="413" text-anchor="middle" class="tick">0</text>
+<line x1="183.8" y1="147" x2="183.8" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="183.8" y="413" text-anchor="middle" class="tick">2</text>
+<line x1="272.6" y1="147" x2="272.6" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="272.6" y="413" text-anchor="middle" class="tick">4</text>
+<line x1="361.4" y1="147" x2="361.4" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="361.4" y="413" text-anchor="middle" class="tick">6</text>
+<line x1="450.3" y1="147" x2="450.3" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="450.3" y="413" text-anchor="middle" class="tick">8</text>
+<line x1="539.1" y1="147" x2="539.1" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="539.1" y="413" text-anchor="middle" class="tick">10</text>
+<line x1="627.9" y1="147" x2="627.9" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="627.9" y="413" text-anchor="middle" class="tick">12</text>
+<line x1="716.7" y1="147" x2="716.7" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="716.7" y="413" text-anchor="middle" class="tick">14</text>
+<line x1="805.5" y1="147" x2="805.5" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="805.5" y="413" text-anchor="middle" class="tick">16</text>
+<line x1="894.3" y1="147" x2="894.3" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="894.3" y="413" text-anchor="middle" class="tick">18</text>
+<line x1="983.2" y1="147" x2="983.2" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="983.2" y="413" text-anchor="middle" class="tick">20</text>
+<line x1="1072.0" y1="147" x2="1072.0" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1072.0" y="413" text-anchor="middle" class="tick">22</text>
+<line x1="1160.8" y1="147" x2="1160.8" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1160.8" y="413" text-anchor="middle" class="tick">24</text>
+<line x1="1249.6" y1="147" x2="1249.6" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1249.6" y="413" text-anchor="middle" class="tick">26</text>
+<line x1="1338.4" y1="147" x2="1338.4" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1338.4" y="413" text-anchor="middle" class="tick">28</text>
+<line x1="1427.2" y1="147" x2="1427.2" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1427.2" y="413" text-anchor="middle" class="tick">30</text>
+<line x1="1516.1" y1="147" x2="1516.1" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1516.1" y="413" text-anchor="middle" class="tick">32</text>
+<line x1="1604.9" y1="147" x2="1604.9" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1604.9" y="413" text-anchor="middle" class="tick">34</text>
+<line x1="1693.7" y1="147" x2="1693.7" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1693.7" y="413" text-anchor="middle" class="tick">36</text>
+<line x1="1782.5" y1="147" x2="1782.5" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1782.5" y="413" text-anchor="middle" class="tick">38</text>
+<line x1="1871.3" y1="147" x2="1871.3" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1871.3" y="413" text-anchor="middle" class="tick">40</text>
+<line x1="1960.1" y1="147" x2="1960.1" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="1960.1" y="413" text-anchor="middle" class="tick">42</text>
+<line x1="2049.0" y1="147" x2="2049.0" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="2049.0" y="413" text-anchor="middle" class="tick">44</text>
+<line x1="2137.8" y1="147" x2="2137.8" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="2137.8" y="413" text-anchor="middle" class="tick">46</text>
+<line x1="2226.6" y1="147" x2="2226.6" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="2226.6" y="413" text-anchor="middle" class="tick">48</text>
+<line x1="2271.0" y1="147" x2="2271.0" y2="397" stroke="#edf0f2" stroke-width="1"/>
+<text x="2271.0" y="413" text-anchor="middle" class="tick">49</text>
+<text x="22" y="272.0" transform="rotate(-90 22 272.0)" text-anchor="middle" class="axis">Goal facts currently true</text>
+<polyline points="95.0,334.5 139.4,334.5 183.8,334.5 228.2,334.5 272.6,334.5 317.0,334.5 361.4,334.5 405.9,334.5 450.3,334.5 494.7,334.5 539.1,397.0 583.5,397.0 627.9,397.0 672.3,397.0 716.7,397.0 761.1,397.0 805.5,397.0 849.9,397.0 894.3,334.5 938.8,334.5 983.2,334.5 1027.6,334.5 1072.0,334.5 1116.4,397.0 1160.8,397.0 1205.2,397.0 1249.6,397.0 1294.0,397.0 1338.4,397.0 1382.8,397.0 1427.2,397.0 1471.7,397.0 1516.1,397.0 1560.5,397.0 1604.9,334.5 1649.3,334.5 1693.7,334.5 1738.1,334.5 1782.5,334.5 1826.9,397.0 1871.3,397.0 1915.7,397.0 1960.1,397.0 2004.6,397.0 2049.0,397.0 2093.4,397.0 2137.8,334.5 2182.2,334.5 2226.6,334.5 2271.0,334.5" fill="none" stroke="#c05a24" stroke-width="2.6" opacity="0.95"/>
+<circle cx="95.0" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<circle cx="139.4" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="140.4" y="324.5" class="action" text-anchor="start" transform="rotate(-90 140.4 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b4 b5)</text>
+<path d="M 179.8 330.5 L 187.8 338.5 M 187.8 330.5 L 179.8 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="184.8" y="324.5" class="action" text-anchor="start" transform="rotate(-90 184.8 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b2)</text>
+<circle cx="228.2" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="229.2" y="324.5" class="action" text-anchor="start" transform="rotate(-90 229.2 324.5)" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">(putdown b4)</text>
+<circle cx="272.6" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="273.6" y="324.5" class="action" text-anchor="start" transform="rotate(-90 273.6 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b2)</text>
+<path d="M 313.0 330.5 L 321.0 338.5 M 321.0 330.5 L 313.0 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="318.0" y="324.5" class="action" text-anchor="start" transform="rotate(-90 318.0 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b1)</text>
+<path d="M 357.4 330.5 L 365.4 338.5 M 365.4 330.5 L 357.4 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="362.4" y="324.5" class="action" text-anchor="start" transform="rotate(-90 362.4 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="405.9" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="406.9" y="324.5" class="action" text-anchor="start" transform="rotate(-90 406.9 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b2)</text>
+<circle cx="450.3" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="451.3" y="324.5" class="action" text-anchor="start" transform="rotate(-90 451.3 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b2)</text>
+<circle cx="494.7" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="495.7" y="324.5" class="action" text-anchor="start" transform="rotate(-90 495.7 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b4)</text>
+<circle cx="539.1" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="540.1" y="387.0" class="action" text-anchor="start" transform="rotate(-90 540.1 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b3)</text>
+<path d="M 579.5 393.0 L 587.5 401.0 M 587.5 393.0 L 579.5 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="584.5" y="387.0" class="action" text-anchor="start" transform="rotate(-90 584.5 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="627.9" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="628.9" y="387.0" class="action" text-anchor="start" transform="rotate(-90 628.9 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b5)</text>
+<circle cx="672.3" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="673.3" y="387.0" class="action" text-anchor="start" transform="rotate(-90 673.3 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="716.7" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="717.7" y="387.0" class="action" text-anchor="start" transform="rotate(-90 717.7 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b3 b1)</text>
+<path d="M 757.1 393.0 L 765.1 401.0 M 765.1 393.0 L 757.1 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="762.1" y="387.0" class="action" text-anchor="start" transform="rotate(-90 762.1 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<circle cx="805.5" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="806.5" y="387.0" class="action" text-anchor="start" transform="rotate(-90 806.5 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b5)</text>
+<path d="M 845.9 393.0 L 853.9 401.0 M 853.9 393.0 L 845.9 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="850.9" y="387.0" class="action" text-anchor="start" transform="rotate(-90 850.9 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<circle cx="894.3" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="895.3" y="324.5" class="action" text-anchor="start" transform="rotate(-90 895.3 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b3)</text>
+<circle cx="938.8" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="939.8" y="324.5" class="action" text-anchor="start" transform="rotate(-90 939.8 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<path d="M 979.2 330.5 L 987.2 338.5 M 987.2 330.5 L 979.2 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="984.2" y="324.5" class="action" text-anchor="start" transform="rotate(-90 984.2 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b1)</text>
+<circle cx="1027.6" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1028.6" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1028.6 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b4)</text>
+<path d="M 1068.0 330.5 L 1076.0 338.5 M 1076.0 330.5 L 1068.0 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1073.0" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1073.0 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="1116.4" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1117.4" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1117.4 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b3)</text>
+<path d="M 1156.8 393.0 L 1164.8 401.0 M 1164.8 393.0 L 1156.8 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1161.8" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1161.8 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="1205.2" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1206.2" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1206.2 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b5)</text>
+<circle cx="1249.6" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1250.6" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1250.6 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="1294.0" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1295.0" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1295.0 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b3 b1)</text>
+<circle cx="1338.4" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1339.4" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1339.4 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="1382.8" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1383.8" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1383.8 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b3 b2)</text>
+<circle cx="1427.2" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1428.2" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1428.2 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b2)</text>
+<circle cx="1471.7" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1472.7" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1472.7 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b3 b1)</text>
+<circle cx="1516.1" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1517.1" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1517.1 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b5)</text>
+<path d="M 1556.5 393.0 L 1564.5 401.0 M 1564.5 393.0 L 1556.5 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1561.5" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1561.5 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<circle cx="1604.9" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1605.9" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1605.9 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b3)</text>
+<circle cx="1649.3" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1650.3" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1650.3 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<path d="M 1689.7 330.5 L 1697.7 338.5 M 1697.7 330.5 L 1689.7 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1694.7" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1694.7 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b1)</text>
+<circle cx="1738.1" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1739.1" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1739.1 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b4)</text>
+<path d="M 1778.5 330.5 L 1786.5 338.5 M 1786.5 330.5 L 1778.5 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1783.5" y="324.5" class="action" text-anchor="start" transform="rotate(-90 1783.5 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="1826.9" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1827.9" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1827.9 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b3)</text>
+<path d="M 1867.3 393.0 L 1875.3 401.0 M 1875.3 393.0 L 1867.3 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1872.3" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1872.3 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="1915.7" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1916.7" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1916.7 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b5)</text>
+<circle cx="1960.1" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1961.1" y="387.0" class="action" text-anchor="start" transform="rotate(-90 1961.1 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="2004.6" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="2005.6" y="387.0" class="action" text-anchor="start" transform="rotate(-90 2005.6 387.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b3 b1)</text>
+<circle cx="2049.0" cy="397.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="2050.0" y="387.0" class="action" text-anchor="start" transform="rotate(-90 2050.0 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b5)</text>
+<path d="M 2089.4 393.0 L 2097.4 401.0 M 2097.4 393.0 L 2089.4 401.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="2094.4" y="387.0" class="action" text-anchor="start" transform="rotate(-90 2094.4 387.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<circle cx="2137.8" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="2138.8" y="324.5" class="action" text-anchor="start" transform="rotate(-90 2138.8 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b3)</text>
+<circle cx="2182.2" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="2183.2" y="324.5" class="action" text-anchor="start" transform="rotate(-90 2183.2 324.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b4)</text>
+<path d="M 2222.6 330.5 L 2230.6 338.5 M 2230.6 330.5 L 2222.6 338.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="2227.6" y="324.5" class="action" text-anchor="start" transform="rotate(-90 2227.6 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b1)</text>
+<circle cx="2271.0" cy="334.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="2272.0" y="324.5" class="action" text-anchor="start" transform="rotate(-90 2272.0 324.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b4)</text>
+<line x1="95" y1="397" x2="2271" y2="397" stroke="#34495e"/>
+<text x="1183.0" y="431" text-anchor="middle" class="axis">Tool-call time</text>
+<rect x="30" y="445" width="2256" height="285" rx="8" fill="#fbf8f4"/>
+<text x="95" y="461" class="panel" fill="#c05a24" style="fill:#c05a24">Run 2: qwen/qwen3.5-9b · 23 calls · final 4/4 · goal_reached=True</text>
+<line x1="95" y1="717.0" x2="2271" y2="717.0" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="721.0" text-anchor="end" class="tick">0</text>
+<line x1="95" y1="654.5" x2="2271" y2="654.5" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="658.5" text-anchor="end" class="tick">1</text>
+<line x1="95" y1="592.0" x2="2271" y2="592.0" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="596.0" text-anchor="end" class="tick">2</text>
+<line x1="95" y1="529.5" x2="2271" y2="529.5" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="533.5" text-anchor="end" class="tick">3</text>
+<line x1="95" y1="467.0" x2="2271" y2="467.0" stroke="#dce2e8" stroke-width="1"/>
+<text x="80" y="471.0" text-anchor="end" class="tick">4</text>
+<line x1="95.0" y1="467" x2="95.0" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="95.0" y="733" text-anchor="middle" class="tick">0</text>
+<line x1="183.8" y1="467" x2="183.8" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="183.8" y="733" text-anchor="middle" class="tick">2</text>
+<line x1="272.6" y1="467" x2="272.6" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="272.6" y="733" text-anchor="middle" class="tick">4</text>
+<line x1="361.4" y1="467" x2="361.4" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="361.4" y="733" text-anchor="middle" class="tick">6</text>
+<line x1="450.3" y1="467" x2="450.3" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="450.3" y="733" text-anchor="middle" class="tick">8</text>
+<line x1="539.1" y1="467" x2="539.1" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="539.1" y="733" text-anchor="middle" class="tick">10</text>
+<line x1="627.9" y1="467" x2="627.9" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="627.9" y="733" text-anchor="middle" class="tick">12</text>
+<line x1="716.7" y1="467" x2="716.7" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="716.7" y="733" text-anchor="middle" class="tick">14</text>
+<line x1="805.5" y1="467" x2="805.5" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="805.5" y="733" text-anchor="middle" class="tick">16</text>
+<line x1="894.3" y1="467" x2="894.3" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="894.3" y="733" text-anchor="middle" class="tick">18</text>
+<line x1="983.2" y1="467" x2="983.2" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="983.2" y="733" text-anchor="middle" class="tick">20</text>
+<line x1="1072.0" y1="467" x2="1072.0" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1072.0" y="733" text-anchor="middle" class="tick">22</text>
+<line x1="1160.8" y1="467" x2="1160.8" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1160.8" y="733" text-anchor="middle" class="tick">24</text>
+<line x1="1249.6" y1="467" x2="1249.6" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1249.6" y="733" text-anchor="middle" class="tick">26</text>
+<line x1="1338.4" y1="467" x2="1338.4" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1338.4" y="733" text-anchor="middle" class="tick">28</text>
+<line x1="1427.2" y1="467" x2="1427.2" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1427.2" y="733" text-anchor="middle" class="tick">30</text>
+<line x1="1516.1" y1="467" x2="1516.1" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1516.1" y="733" text-anchor="middle" class="tick">32</text>
+<line x1="1604.9" y1="467" x2="1604.9" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1604.9" y="733" text-anchor="middle" class="tick">34</text>
+<line x1="1693.7" y1="467" x2="1693.7" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1693.7" y="733" text-anchor="middle" class="tick">36</text>
+<line x1="1782.5" y1="467" x2="1782.5" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1782.5" y="733" text-anchor="middle" class="tick">38</text>
+<line x1="1871.3" y1="467" x2="1871.3" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1871.3" y="733" text-anchor="middle" class="tick">40</text>
+<line x1="1960.1" y1="467" x2="1960.1" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="1960.1" y="733" text-anchor="middle" class="tick">42</text>
+<line x1="2049.0" y1="467" x2="2049.0" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="2049.0" y="733" text-anchor="middle" class="tick">44</text>
+<line x1="2137.8" y1="467" x2="2137.8" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="2137.8" y="733" text-anchor="middle" class="tick">46</text>
+<line x1="2226.6" y1="467" x2="2226.6" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="2226.6" y="733" text-anchor="middle" class="tick">48</text>
+<line x1="2271.0" y1="467" x2="2271.0" y2="717" stroke="#edf0f2" stroke-width="1"/>
+<text x="2271.0" y="733" text-anchor="middle" class="tick">49</text>
+<text x="22" y="592.0" transform="rotate(-90 22 592.0)" text-anchor="middle" class="axis">Goal facts currently true</text>
+<polyline points="95.0,654.5 139.4,654.5 183.8,654.5 228.2,654.5 272.6,654.5 317.0,654.5 361.4,654.5 405.9,654.5 450.3,717.0 494.7,717.0 539.1,717.0 583.5,717.0 627.9,717.0 672.3,717.0 716.7,717.0 761.1,654.5 805.5,654.5 849.9,592.0 894.3,592.0 938.8,529.5 983.2,529.5 1027.6,467.0 1072.0,467.0 1116.4,467.0" fill="none" stroke="#c05a24" stroke-width="2.6" opacity="0.95"/>
+<circle cx="95.0" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<path d="M 135.4 650.5 L 143.4 658.5 M 143.4 650.5 L 135.4 658.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="140.4" y="644.5" class="action" text-anchor="start" transform="rotate(-90 140.4 644.5)" fill="#148f77" style="fill:#148f77;font-weight:bold">(pickup b4)</text>
+<circle cx="183.8" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="184.8" y="644.5" class="action" text-anchor="start" transform="rotate(-90 184.8 644.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b4 b5)</text>
+<path d="M 224.2 650.5 L 232.2 658.5 M 232.2 650.5 L 224.2 658.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="229.2" y="644.5" class="action" text-anchor="start" transform="rotate(-90 229.2 644.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b2)</text>
+<circle cx="272.6" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="273.6" y="644.5" class="action" text-anchor="start" transform="rotate(-90 273.6 644.5)" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">(putdown b4)</text>
+<circle cx="317.0" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="318.0" y="644.5" class="action" text-anchor="start" transform="rotate(-90 318.0 644.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b5 b2)</text>
+<path d="M 357.4 650.5 L 365.4 658.5 M 365.4 650.5 L 357.4 658.5" stroke="#c0392b" stroke-width="2.2"/>
+<text x="362.4" y="644.5" class="action" text-anchor="start" transform="rotate(-90 362.4 644.5)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b3)</text>
+<circle cx="405.9" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="406.9" y="644.5" class="action" text-anchor="start" transform="rotate(-90 406.9 644.5)" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">(putdown b5)</text>
+<circle cx="450.3" cy="717.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="451.3" y="707.0" class="action" text-anchor="start" transform="rotate(-90 451.3 707.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b2 b3)</text>
+<path d="M 490.7 713.0 L 498.7 721.0 M 498.7 713.0 L 490.7 721.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="495.7" y="707.0" class="action" text-anchor="start" transform="rotate(-90 495.7 707.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="539.1" cy="717.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="540.1" y="707.0" class="action" text-anchor="start" transform="rotate(-90 540.1 707.0)" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">(putdown b2)</text>
+<circle cx="583.5" cy="717.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="584.5" y="707.0" class="action" text-anchor="start" transform="rotate(-90 584.5 707.0)" fill="#8e44ad" style="fill:#8e44ad;font-weight:bold">(unstack b3 b1)</text>
+<circle cx="627.9" cy="717.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="628.9" y="707.0" class="action" text-anchor="start" transform="rotate(-90 628.9 707.0)" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">(putdown b3)</text>
+<path d="M 668.3 713.0 L 676.3 721.0 M 676.3 713.0 L 668.3 721.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="673.3" y="707.0" class="action" text-anchor="start" transform="rotate(-90 673.3 707.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b1)</text>
+<circle cx="716.7" cy="717.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="717.7" y="707.0" class="action" text-anchor="start" transform="rotate(-90 717.7 707.0)" fill="#148f77" style="fill:#148f77;font-weight:bold">(pickup b5)</text>
+<circle cx="761.1" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="762.1" y="644.5" class="action" text-anchor="start" transform="rotate(-90 762.1 644.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b5 b1)</text>
+<circle cx="805.5" cy="654.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="806.5" y="644.5" class="action" text-anchor="start" transform="rotate(-90 806.5 644.5)" fill="#148f77" style="fill:#148f77;font-weight:bold">(pickup b3)</text>
+<circle cx="849.9" cy="592.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="850.9" y="582.0" class="action" text-anchor="start" transform="rotate(-90 850.9 582.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b3 b5)</text>
+<circle cx="894.3" cy="592.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="895.3" y="582.0" class="action" text-anchor="start" transform="rotate(-90 895.3 582.0)" fill="#148f77" style="fill:#148f77;font-weight:bold">(pickup b2)</text>
+<circle cx="938.8" cy="529.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="939.8" y="519.5" class="action" text-anchor="start" transform="rotate(-90 939.8 519.5)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b2 b3)</text>
+<circle cx="983.2" cy="529.5" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="984.2" y="519.5" class="action" text-anchor="start" transform="rotate(-90 984.2 519.5)" fill="#148f77" style="fill:#148f77;font-weight:bold">(pickup b4)</text>
+<circle cx="1027.6" cy="467.0" r="4.2" fill="#c05a24" stroke="#fff" stroke-width="1"/>
+<text x="1028.6" y="457.0" class="action" text-anchor="start" transform="rotate(-90 1028.6 457.0)" fill="#2463a6" style="fill:#2463a6;font-weight:bold">(stack b4 b2)</text>
+<rect x="1068.0" y="463.0" width="8" height="8" fill="#7f8c8d"/>
+<text x="1073.0" y="457.0" class="action" text-anchor="start" transform="rotate(-90 1073.0 457.0)" fill="#34495e" style="fill:#34495e;font-weight:bold">goal_reached</text>
+<path d="M 1112.4 463.0 L 1120.4 471.0 M 1120.4 463.0 L 1112.4 471.0" stroke="#c0392b" stroke-width="2.2"/>
+<text x="1117.4" y="457.0" class="action" text-anchor="start" transform="rotate(-90 1117.4 457.0)" fill="#ca6f1e" style="fill:#ca6f1e;font-weight:bold">(putdown b4)</text>
+<line x1="95" y1="717" x2="2271" y2="717" stroke="#34495e"/>
+<text x="1183.0" y="751" text-anchor="middle" class="axis">Tool-call time</text>
+<text x="95" y="787" class="legend" font-weight="bold">Outcome markers:</text>
+<circle cx="225" cy="783" r="4" fill="#2e8b57"/>
+<text x="235" y="787" class="legend">success</text>
+<path d="M 411 779 L 419 787 M 419 779 L 411 787" stroke="#c0392b" stroke-width="2"/>
+<text x="425" y="787" class="legend">precondition_failed</text>
+<polygon points="605,778 610,783 605,788 600,783" fill="#8e44ad"/>
+<text x="615" y="787" class="legend">unknown_action</text>
+<rect x="791" y="779" width="8" height="8" fill="#7f8c8d"/>
+<text x="805" y="787" class="legend">malformed_action</text>
+<polygon points="985,777 990,786 980,786" fill="#e67e22"/>
+<text x="995" y="787" class="legend">transient_failure</text>
+</svg>

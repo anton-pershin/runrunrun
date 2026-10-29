@@ -5,3 +5,15 @@ run_aider.sh
 # vim
 *.swp
 *.swo
+
+# CDR study external source checkouts are pinned and fetched by bootstrap scripts
+08-reasoning-states-pddl/vendor/
+08-reasoning-states-pddl/.venv/
+08-reasoning-states-pddl/**/__pycache__/
+
+# Retain raw follow-up experiments locally; commit compact reports separately.
+08-reasoning-states-pddl/results/control/
+08-reasoning-states-pddl/results/decision-record/
+08-reasoning-states-pddl/results/models/**/*.json
+08-reasoning-states-pddl/results/trajectories.json
+08-reasoning-states-pddl/results/llm*.json
